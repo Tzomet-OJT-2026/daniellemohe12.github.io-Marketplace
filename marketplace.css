@@ -13,6 +13,16 @@ h1{
     margin: auto;
 }
 
+h3.products{
+    text-align: start;
+}
+
+div.message{
+    text-align: center;
+    text-decoration-style: solid;
+    text-decoration: solid;
+}
+
 input{
     align-self: center;
     text-align: center;
