@@ -4,7 +4,7 @@ const content = document.getElementById("content");
 
 fileInput.addEventListener("change", handleFileSelection);
 
-function handleFileSelection(event) {
+async function handleFileSelection(event) {
   const file = event.target.files[0];
   message.textContent = "";
   content.textContent = "";
@@ -14,9 +14,9 @@ function handleFileSelection(event) {
     return;
   }
 
-  const reader = new FileReader();
-  reader.onload = () => {
-    const items = Object.values(JSON.parse(reader.result))[0];
+  try{
+    const text = await readFileAsText(file);
+    const items = Object.values(JSON.parse(text))[0];
     for(const product of items){
         const item = document.createElement("pre");
         let item_text = '';
@@ -26,15 +26,24 @@ function handleFileSelection(event) {
         item.textContent = item_text;
         content.appendChild(item);
     }
-    
-  };
-  reader.onerror = () => {
-    showMessage("Error reading the file Please try again!", "error");
-  };
-  reader.readAsText(file);
 
-  
-}
+
+  }catch(error){
+    showMessage("error reading the file please try again!", "error")
+  }
+};
+
+const readFileAsText = (file) => new Promise ((resolve, reject) => {
+    const reader = new FileReader();
+
+    reader.onload = () => {
+        resolve(reader.result);
+    };
+    reader.onerror = () => {
+        reject(reader.error);
+    };
+    reader.readAsText(file);
+});
 
 function showMessage(text, type) {
   message.textContent = text;
