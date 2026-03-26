@@ -1,6 +1,7 @@
 const fileInput = document.getElementById("fileinput");
 const message = document.getElementById("message");
 const content = document.getElementById("content");
+const products = document.getElementById("products");
 
 fileInput.addEventListener("change", handleFileSelection);
 
@@ -8,6 +9,7 @@ async function handleFileSelection(event) {
   const file = event.target.files[0];
   message.textContent = "";
   content.textContent = "";
+  products.textContent = "";
   
   if (!file) {
     showMessage("No file selected please choose a file", "error");
@@ -26,7 +28,7 @@ async function handleFileSelection(event) {
         item.textContent = item_text;
         content.appendChild(item);
     }
-
+    products.textContent = "products:";
 
   }catch(error){
     showMessage("error reading the file please try again!", "error")
