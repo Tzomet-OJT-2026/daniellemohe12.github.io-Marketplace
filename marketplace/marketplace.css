@@ -1,0 +1,42 @@
+body{
+    background-color: lightblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3{
+    text-align: center;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    margin: auto;
+}
+
+h3.products{
+    text-align: start;
+}
+
+div.message{
+    text-align: center;
+    text-decoration-style: solid;
+    text-decoration: solid;
+}
+
+input{
+    align-self: center;
+    text-align: center;
+    margin: auto;
+    margin-left: 34rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+pre{
+    border-width: 5px;
+    border-color: white;
+    border-style: solid;
+    border-block-end-color: #93badd;
+    border-left-color: #8dacc7;
+    direction: ltr;
+    font-family: 'Times New Roman', Times, serif;
+}

@@ -1,0 +1,38 @@
+{
+    "products":[
+        {
+            "name": "sofa",
+            "description": "a comfortable seat, featuring a backrest and two armrests designed to seat two or more people",
+            "price": "800₪",
+            "seller": "IKEA"
+        },
+
+        {
+            "name": "kitchen utensils",
+            "description": "essential hand-held tools used for food preparation, cooking, and serving",
+            "price": "40₪",
+            "seller": "IKEA"
+        },
+
+        {
+            "name": "dining chair",
+            "description": "essential seating designed for comfort and style around a dining table",
+            "price": "200₪",
+            "seller": "IKEA"
+        },
+
+        {
+            "name": "dining table",
+            "description": "a central furniture piece with a flat surface and legs, designed for serving meals, gathering, and working",
+            "price": "600₪",
+            "seller": "IKEA"
+        },
+
+        {
+            "name": "carpet",
+            "description": "a thick, woven, or tufted textile floor covering designed for warmth, comfort, and noise reduction",
+            "price": "400₪",
+            "seller": "IKEA"
+        }
+    ]
+}
